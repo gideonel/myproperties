@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(29 78 216 / var(--tw-bg-opacity)) rgb(238, 238, 238);
+  }
+
+  
+  
+ 
