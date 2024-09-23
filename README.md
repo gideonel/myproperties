@@ -1,105 +1,56 @@
-# Property Pulse
+# MyProperty
 
 > A web application to help you find your next rental property.
 
-This is the main project from my [Next 14 From Scratch Course](https://www.traversymedia.com/nextjs-from-scratch)
-
-## Important notes
-
-If you are following along with the course and running into issues, then please
-take the time to read the README in the [bugfix branch](https://github.com/bradtraversy/property-pulse/tree/bugfix)
-as this solves many common problems.
-
-There is also a [refactor branch](https://github.com/bradtraversy/property-pulse/tree/refactor)
-where the code has been heavily refactored to stay true to NextJS recommended
-best practices by using querying the database directly from our server
-components for data fetching, and performing updates and adding data using
-server actions.  
-The refactor also makes deployment a fair bit smoother.  
-The course is currently being re recorded for a re release using the code in
-the refactor branch.
-
-The `_theme_files` folder contains the pure HTML files with Tailwind classes.
-
-<img src="/public/images/screen.jpg" />
+MyProperty is a full-featured property management application designed to assist users in browsing, managing, and searching for rental properties. With user authentication, CRUD operations for listings, messaging, and social sharing, it provides a seamless experience for both property owners and renters.
 
 ## Features
 
-Here are some of the current features that Property Pulse has:
+Here are some of the current features that MyProperty offers:
 
-- [x] User authentication with Google & Next Auth
-- [x] User authorization
-- [x] Route protection
-- [x] User profile with user listings
-- [x] Property Listing CRUD
-- [x] Property image upload (Multiple)
-- [x] Property search
-- [x] Internal messages with 'unread' notifications
-- [x] Photoswipe image gallery
-- [x] Mapbox maps
-- [x] Toast notifications
-- [x] Property bookmarking / saved properties
-- [x] Property sharing to social media
-- [x] Loading spinners
-- [x] Responsive design (Tailwind)
-- [x] Custom 404 page
+- [x] **User Authentication** with Google & NextAuth.js
+- [x] **User Authorization** with role-based access
+- [x] **Route Protection** for secured areas of the app
+- [x] **User Profiles** displaying user-specific listings
+- [x] **Property Listing CRUD** (Create, Read, Update, Delete)
+- [x] **Multiple Property Image Uploads** with Cloudinary
+- [x] **Property Search** with various filters
+- [x] **Internal Messaging** with 'unread' notifications
+- [x] **Photoswipe Image Gallery** for property images
+- [x] **Map Integration** using Mapbox for property location
+- [x] **Toast Notifications** for user feedback (e.g., success, errors)
+- [x] **Property Bookmarking** to save favorite properties
+- [x] **Property Sharing** to social media platforms
+- [x] **Loading Spinners** for better UX during data fetches
+- [x] **Responsive Design** using TailwindCSS
+- [x] **Custom 404 Page** for better error handling
 
-Property Pulse uses the following technologies:
+## Technologies Used
 
-- [Next.js](https://nextjs.org/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [Mongoose](https://mongoosejs.com/)
-- [NextAuth.js](https://next-auth.js.org/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [Photoswipe](https://photoswipe.com/)
-- [Cloudinary](https://cloudinary.com/)
-- [Mapbox](https://www.mapbox.com/)
-- [React Map GL](https://visgl.github.io/react-map-gl/)
-- [React Geocode](https://www.npmjs.com/package/react-geocode)
-- [React Spinners](https://www.npmjs.com/package/react-spinners)
-- [React Toastify](https://fkhadra.github.io/react-toastify/)
-- [React Share](https://www.npmjs.com/package/react-share)
+MyProperty utilizes modern web technologies and services to ensure a scalable and responsive user experience:
 
-## Getting Started
+- [Next.js](https://nextjs.org/) - The React framework for building fast web applications.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for fast UI development.
+- [MongoDB](https://www.mongodb.com/) - A NoSQL database for storing property and user data.
+- [Mongoose](https://mongoosejs.com/) - ODM for MongoDB to handle data modeling.
+- [NextAuth.js](https://next-auth.js.org/) - Authentication solution for Next.js applications.
+- [React Icons](https://react-icons.github.io/react-icons/) - Icon library for React apps.
+- [Photoswipe](https://photoswipe.com/) - An image gallery for viewing property photos.
+- [Cloudinary](https://cloudinary.com/) - Cloud service for handling property image uploads.
+- [Mapbox](https://www.mapbox.com/) - Map service for visualizing property locations.
+- [React Map GL](https://visgl.github.io/react-map-gl/) - Mapbox integration with React.
+- [React Geocode](https://www.npmjs.com/package/react-geocode) - Convert addresses into geographic coordinates.
+- [React Spinners](https://www.npmjs.com/package/react-spinners) - A collection of loading spinners for React.
+- [React Toastify](https://fkhadra.github.io/react-toastify/) - Notifications for React apps.
+- [React Share](https://www.npmjs.com/package/react-share) - Social media sharing components for React.
 
-### Prerequisites
+## Prerequisites
 
-- Node.js version 18 or higher
-- MongoDB Atlas account and a cluster. Sign up and create a cluster at [MongoDB](https://www.mongodb.com/)
-- Cloudinary account. Sign up at [Cloudinary](https://cloudinary.com/)
-- Google console account. Sign up at [Google Cloud](https://console.cloud.google.com/)
-- Mapbox account. Sign up at [Mapbox](https://www.mapbox.com/)
+Before you begin, ensure you have met the following requirements:
 
-### `.env` File
-
-Rename the `env.example` file to `.env` and fill in the following environment variables:
-
-- Get your MongoDB connection string from your MongoDB Atlas cluster and add it to `MONGODB_URI`.
-- Get your Google client ID and secret from your Google console account and add them to `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`.
-- Add a secret to `NEXTAUTH_SECRET`. You can generate with the following command:
-  ```bash
-  openssl rand -base64 32
-  ```
-- Get your Cloudinary cloud name, API key, and API secret from your Cloudinary account and add them to `CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET`.
-- Get your Mapbox token from your Mapbox account and add it to `NEXT_PUBLIC_MAPBOX_TOKEN`.
-- Get your Google Geocoding API key from your Google console account and add it to `NEXT_PUBLIC_GOOGLE_GEOCODING_API_KEY`.
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Run the Development Server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+- Node.js version 18 or higher.
+- A MongoDB Atlas account with a cluster setup. Sign up and create a cluster at [MongoDB](https://www.mongodb.com/).
+- A Cloudinary account for image uploads. Sign up at [Cloudinary](https://cloudinary.com/).
+- A Google Cloud account for Google OAuth. Sign up at [Google Cloud](https://console.cloud.google.com/).
+- A Mapbox account for map integration. Sign up at [Mapbox](https://www.mapbox.com
