@@ -8,14 +8,14 @@ const About = () => {
         {/* Image Section */}
         <div className="wow fadeIn" data-wow-delay="0.1s">
           <div className="relative overflow-hidden p-5 pe-0">
-            <img className="w-full h-auto object-cover rounded-lg shadow-lg" src="/images/about.jpg" alt="About Guest House" />
+            <img className="w-full h-auto object-cover rounded-lg shadow-lg" src="/images/about.jpg" alt="About Property" />
           </div>
         </div>
 
         {/* Text Section */}
         <div className="wow fadeIn" data-wow-delay="0.5s">
           <h1 className="text-3xl md:text-5xl font-extrabold mb-6 text-gray-800 leading-tight">
-            The Number One Place to Find Your Perfect Guest House
+            The Number One Place to Find Your Perfect Property
           </h1>
 
           <p className="text-lg mb-6 text-gray-600">
