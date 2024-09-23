@@ -15,7 +15,7 @@ const About = () => {
         {/* Text Section */}
         <div className="wow fadeIn" data-wow-delay="0.5s">
           <h1 className="text-3xl md:text-5xl font-extrabold mb-6 text-gray-800 leading-tight">
-            The Number One Place to Find Your Perfect Property
+            The Number One Place to Find Your Perfect Home / Property
           </h1>
 
           <p className="text-lg mb-6 text-gray-600">
