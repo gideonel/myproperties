@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import logo from '@/assets/images/logo-white.png';
+import Image from 'next/image';
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-blue-700 text-gray-400 pt-5 mt-5">
       <div className="container mx-auto py-5">
@@ -91,8 +94,12 @@ const Footer = () => {
       <div className="bg-gray-800 py-4">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+          <div className='mb-4 md:mb-0'>
+           <Image src={logo} alt='Logo' className='h-8 w-auto' />
+         </div>
             <div className="mb-4 md:mb-0">
-              &copy; 2021 - 2024 <a href="#" className="text-primary">My Properties</a>
+              {/* &copy; 2021 - 2024 <a href="#" className="text-primary">My Properties</a> */}
+              &copy; {currentYear}<a href="#"  className="text-primary">MyProperty.</a> All rights reserved.
             </div>
             <div className="space-x-4">
               <a href="/" className="hover:underline">Home</a>
