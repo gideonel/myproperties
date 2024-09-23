@@ -90,6 +90,14 @@ const Navbar = () => {
                   About
                 </Link>
                 <Link
+              href='/contact'
+              className={`${
+                pathname === '/contact' ? 'bg-black' : ''
+              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+            >
+              Contact
+            </Link>
+                <Link
                   href='/properties'
                   className={`${
                     pathname === '/properties' ? 'bg-black' : ''
@@ -270,6 +278,14 @@ const Navbar = () => {
               } text-white block rounded-md px-3 py-2 text-base font-medium`}
             >
               About
+            </Link>
+            <Link
+              href='/contact'
+              className={`${
+                pathname === '/contact' ? 'bg-black' : ''
+              } text-white block rounded-md px-3 py-2 text-base font-medium`}
+            >
+              Contact
             </Link>
             <Link
               href='/properties'

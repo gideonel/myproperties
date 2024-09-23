@@ -5,16 +5,17 @@ import { useRouter } from 'next/navigation';
 const PropertySearchForm = () => {
   const [location, setLocation] = useState('');
   const [propertyType, setPropertyType] = useState('All');
+  const [category, setCategory] = useState('All');
 
   const router = useRouter();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (location === '' && propertyType === 'All') {
+    if (location === '' && propertyType === 'All' && category === 'All') {
       router.push('/properties');
     } else {
-      const query = `?location=${location}&propertyType=${propertyType}`;
+      const query = `?location=${location}&propertyType=${propertyType}&category=${category}`;
 
       router.push(`/properties/search-results${query}`);
     }
@@ -57,6 +58,25 @@ const PropertySearchForm = () => {
           <option value='Loft'>Loft</option>
           <option value='Room'>Room</option>
           <option value='Other'>Other</option>
+        </select>
+      </div>
+
+
+
+      <div className='w-full md:w-2/5 md:pl-2 py-3'>
+        <label htmlFor='category' className='sr-only'>
+          Property Category
+        </label>
+        <select
+          id='category'
+          className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500'
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+        >
+          <option value='All'>All</option>
+          <option value='Sale'>Sale</option>
+          <option value='Lease'>Lease</option>
+          <option value='Rent'>Rent</option>
         </select>
       </div>
       <button

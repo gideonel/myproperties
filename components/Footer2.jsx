@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebookF, faYoutube, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-const Footer = () => {
+const Footer2 = () => {
   return (
     <footer className="bg-blue-700 text-gray-400 pt-5 mt-5">
       <div className="container mx-auto py-5">
@@ -107,28 +107,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
-
-// import Image from 'next/image';
-// import logo from '@/assets/images/logo.png';
-
-// const Footer = () => {
-//   const currentYear = new Date().getFullYear();
-
-//   return (
-//     <footer className='bg-gray-200 py-4 mt-24'>
-//       <div className='container mx-auto flex flex-col md:flex-row items-center justify-between px-4'>
-//         <div className='mb-4 md:mb-0'>
-//           <Image src={logo} alt='Logo' className='h-8 w-auto' />
-//         </div>
-
-//         <div>
-//           <p className='text-sm text-gray-500 mt-2 md:mt-0'>
-//             &copy; {currentYear} MyProperty. All rights reserved.
-//           </p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-// export default Footer;
+export default Footer2;

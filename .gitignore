@@ -28,8 +28,6 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
-env.example
-mongo start and stop.txt
 
 # vercel
 .vercel
@@ -37,6 +35,3 @@ mongo start and stop.txt
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-
-index.html
